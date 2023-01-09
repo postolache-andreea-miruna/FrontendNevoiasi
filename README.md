@@ -11,5 +11,6 @@ Cerinte:
 - Sa fie cel putin o pagina cu un form ( login/register) ✔️ 
 - Firebase sau orice alt mediu de backend ✔️ 
 
+[Video Proiect](https://youtu.be/eCeVB5C34CY)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
