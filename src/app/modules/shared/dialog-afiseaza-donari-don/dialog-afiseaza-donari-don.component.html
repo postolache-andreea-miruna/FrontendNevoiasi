@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="title">
+        Donari facute de donator
+    </h1>
+    <form [formGroup] ="donaridonForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id Donator</mat-label>
+            <input matInput placeholder="Id donator" formControlName="id" />
+        </mat-form-field>
+
+        <button mat-raised-button (click)="changeRoute()" appHoverBtn>
+            Salveaza
+        </button>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div clas="container">
+    <h1 class="title">
+        Detalii Antrenor
+    </h1>
+    <mat-card class="card">
+        <p>Nume: {{antrenorId.numeAntrenor}} {{antrenorId.prenumeAntrenor}}</p>
+        <p>Gen: {{antrenorId.gen}}</p>
+        <p>Ani Experienta: {{antrenorId.aniExperienta}}</p>
+        <p>Sport: {{antrenorId.numeSport}}</p>
+        <p>Club:  {{antrenorId.numeClub}}</p>
+    </mat-card>
+
+    <button mat-raised-button onclick="location.href='/antr/antrenor';">Antrenori</button>

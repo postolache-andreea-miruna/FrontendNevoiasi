@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="title">
+        Adauga Competitie
+    </h1>
+    <form [formGroup] = "competitieAddForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume" formControlName="numeCompetitie"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Data Start</mat-label>
+            <input matInput placeholder="Start" formControlName="dataStart"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Data Final</mat-label>
+            <input matInput placeholder="Final" formControlName="dataFinal"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Importanta</mat-label>
+            <input matInput placeholder="Importanta" formControlName="importanta"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="saveAdd()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+

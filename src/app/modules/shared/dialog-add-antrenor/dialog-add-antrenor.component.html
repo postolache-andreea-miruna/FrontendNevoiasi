@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="title">
+        Adauga Antrenor
+    </h1>
+    <form [formGroup] = "antrAddForm" class="form">
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume Antrenor" formControlName="numeAntrenor"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Prenume</mat-label>
+            <input matInput placeholder="Prenume Antrenor" formControlName="prenumeAntrenor"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Gen</mat-label>
+            <input matInput placeholder="Antrenor Gen" formControlName="gen"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Ani Experienta</mat-label>
+            <input matInput placeholder="Ani experienta" formControlName="aniExperienta"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Sport Id</mat-label>
+            <input matInput placeholder="Sport Id" formControlName="sportId"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Club Id</mat-label>
+            <input matInput placeholder="Club Id" formControlName="clubId"/>
+        </mat-form-field>
+        
+        <button mat-raised-button (click)="saveAdd()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+

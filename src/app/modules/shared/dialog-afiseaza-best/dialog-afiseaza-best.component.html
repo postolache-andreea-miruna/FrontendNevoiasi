@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="title">
+        BestOf Nevoias
+    </h1>
+    <form [formGroup] ="bestForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id Nevoias</mat-label>
+            <input matInput placeholder="Id nevoias" formControlName="id" />
+        </mat-form-field>
+
+        <button mat-raised-button (click)="changeRoute()" appHoverBtn>
+            Salveaza
+        </button>
+    </form>
+</div>
+

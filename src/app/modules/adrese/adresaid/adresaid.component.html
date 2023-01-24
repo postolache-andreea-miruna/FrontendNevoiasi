@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div clas="container">
+    <h1 class="title">
+        Info Adresa
+    </h1>
+    <mat-card class="card">
+        <p>Nevoias: {{adresaId.talentatNevoiasNume}}  {{adresaId.talentatNevoiasPrenume}}</p>
+        <p>Strada: {{adresaId.numeStrada}} </p>
+        <p>Bloc: {{adresaId.numarBloc}}</p>
+        <p>Aparament:  {{adresaId.numarAp}}</p>
+        <p>Cod Postal: {{adresaId.codPostal}}</p>
+
+    </mat-card>
+
+    <button mat-raised-button onclick="location.href='/add/adresa';">Adrese</button>

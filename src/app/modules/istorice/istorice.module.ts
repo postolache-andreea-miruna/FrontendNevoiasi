@@ -1,0 +1,36 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BestofComponent } from './bestof/bestof.component';
+import { IstoricComponent } from './istoric/istoric.component';
+import { IstoricbyidnevComponent } from './istoricbyidnev/istoricbyidnev.component';
+import { IstoriceRoutingModule } from './istorice-routing.module';
+
+
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+import { SharedModule } from '../shared/shared.module';
+
+@NgModule({
+  declarations: [
+    BestofComponent,
+    IstoricComponent,
+    IstoricbyidnevComponent
+  ],
+  imports: [
+    CommonModule,
+    IstoriceRoutingModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatCardModule,
+    SharedModule
+  ],
+  exports: [
+    MatCardModule,
+  ]
+})
+export class IstoriceModule { }

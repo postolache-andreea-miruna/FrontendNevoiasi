@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<div class = "container">
+    <h1 class="title">
+        Sportivi Nevoiasi Talentati
+    </h1> 
+
+    <table mat-table [dataSource]="nevoiasi" class="mat-elevation-z8 table">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="numeNevoias">
+            <th mat-header-cell *matHeaderCellDef> Nume </th>
+            <td mat-cell *matCellDef="let element"> {{element.numeNevoias}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="prenumeNevoias">
+            <th mat-header-cell *matHeaderCellDef> Prenume </th>
+            <td mat-cell *matCellDef="let element">{{element.prenumeNevoias}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sportTalent">
+            <th mat-header-cell *matHeaderCellDef> Sport </th>
+            <td mat-cell *matCellDef="let element">{{element.sportTalent}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="deAjutat">
+            <th mat-header-cell *matHeaderCellDef> Este ajutat? </th>
+            <td mat-cell *matCellDef="let element">{{element.deAjutat}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element">{{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="telefon">
+            <th mat-header-cell *matHeaderCellDef> Nr tel </th>
+            <td mat-cell *matCellDef="let element">{{element.telefon}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="profile">
+            <th mat-header-cell *matHeaderCellDef> Profil </th>
+            <td class ="see-profile"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)="goToNevoiasProfile(element.id)">
+                    person</mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Editare </th>
+            <td class ="delete-action"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)= "editNevoias(element)">
+                    edit</mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Stergere </th>
+            <td class ="delete-action"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)="deleteNevoias(element.id)">
+                    delete</mat-icon>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <button mat-raised-button (click)="addNewNevoias()">
+        Adauga Nevoias
+    </button>
+    <button mat-raised-button (click)="inscrieriNevoias()">
+        Inscrieri Nevoias
+    </button>
+    <button mat-raised-button (click)="BestOfForNevoias()">
+        BestOf Nevoias
+    </button>
+    <button mat-raised-button (click)="IstoricForNevoias()">
+        Istoric Nevoias
+    </button>
+    <button mat-raised-button (click)="DonariByData()">
+        Donari Nevoias Dupa Data
+    </button>
+    <button mat-raised-button (click)="DonariByNev()">
+        Donari Pentru Nevoias 
+    </button>
+    <button mat-raised-button onclick="location.href='/home';" >Home</button>
+
+</div>
+
+

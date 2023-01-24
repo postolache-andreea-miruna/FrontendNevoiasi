@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="title">
+        Editeaza Proba
+    </h1>
+    <form [formGroup] = "probaForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Proba Id" formControlName="id"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume Proba" formControlName="numeProba"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="save()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+

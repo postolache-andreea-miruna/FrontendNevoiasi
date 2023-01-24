@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class = "container">
+    <h1 class="title">
+        Sporturi
+    </h1> 
+
+    <table mat-table [dataSource]="sporturi" class="mat-elevation-z8 table">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="numeSport">
+            <th mat-header-cell *matHeaderCellDef> Nume </th>
+            <td mat-cell *matCellDef="let element"> {{element.numeSport}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Editare </th>
+            <td class ="delete-action"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)= "editSport(element)">
+                    edit</mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Stergere </th>
+            <td class ="delete-action"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)="deleteSport(element.id)">
+                    delete</mat-icon>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <button mat-raised-button (click)="addNewSport()">
+        Adauga Sport
+    </button>
+
+    <button mat-raised-button (click)="antrenoriSport()">
+        Antrenori Sport
+    </button>
+
+    <button mat-raised-button onclick="location.href='/home';" >Home</button>
+
+</div>

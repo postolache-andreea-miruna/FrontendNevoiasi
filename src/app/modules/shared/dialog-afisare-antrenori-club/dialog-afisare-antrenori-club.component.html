@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="title">
+        Afiseaza Antrenorii Clubului
+    </h1>
+    <form [formGroup] ="afisareAntrForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id Club</mat-label>
+            <input matInput placeholder="Id club" formControlName="id" />
+        </mat-form-field>
+
+        <button mat-raised-button (click)="changeRoute()" appHoverBtn>
+            Salveaza
+        </button>
+    </form>
+</div>
+

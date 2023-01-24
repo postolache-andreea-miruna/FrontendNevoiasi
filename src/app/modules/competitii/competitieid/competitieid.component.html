@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div clas="container">
+    <h1 class="title">
+        Detalii Competitie
+    </h1>
+    <mat-card class="card">
+        <p>Nume: {{competitieId.numeCompetitie}} </p>
+        <p>Interval Desfasurare: {{competitieId.dataStart}} - {{competitieId.dataFinal}}</p>
+        <p>Importanta: {{competitieId.importanta}}</p>
+    </mat-card>
+
+    <button mat-raised-button onclick="location.href='/comp/competitie';">Competitii</button>

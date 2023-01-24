@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="title">
+        Editeaza Nevoias
+    </h1>
+    <form [formGroup] = "nevoiasForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Nevoias Id" formControlName="id"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume Nevoias" formControlName="numeNevoias"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>A fost ajutat? [0-nu, 1-da]</mat-label>
+            <input matInput placeholder="De Ajutat" formControlName="deAjutat"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Numar Telefon</mat-label>
+            <input matInput placeholder="Numarul de telefon" formControlName="telefon"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="save()" appHoverBtn>Salveaza</button>
+    </form>
+</div>

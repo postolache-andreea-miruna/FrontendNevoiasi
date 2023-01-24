@@ -1,0 +1,67 @@
+  <app-navbar></app-navbar>
+  <div class = "container">
+    <h1 class="title">
+        Antrenori
+    </h1> 
+  <table mat-table [dataSource]="antrenori" class="mat-elevation-z8 table">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container> 
+      
+        <ng-container matColumnDef="numeAntrenor">
+            <th mat-header-cell *matHeaderCellDef> Nume </th>
+            <td mat-cell *matCellDef="let element"> {{element.numeAntrenor}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="prenumeAntrenor">
+            <th mat-header-cell *matHeaderCellDef> Prenume </th>
+            <td mat-cell *matCellDef="let element">{{element.prenumeAntrenor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numeSport">
+            <th mat-header-cell *matHeaderCellDef> Sport </th>
+            <td mat-cell *matCellDef="let element">{{element.numeSport}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="profile">
+            <th mat-header-cell *matHeaderCellDef> Profil </th>
+            <td class ="see-profile"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)="goToAntrenorProfile(element.id)">
+                    person</mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Editare </th>
+            <td class ="delete-action"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)= "editAntrenor(element)">
+                    edit</mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Stergere </th>
+            <td class ="delete-action"  mat-cell *matCellDef="let element"> 
+                <mat-icon (click)="deleteAntrenor(element.id)">
+                    delete</mat-icon>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button mat-raised-button (click)="addNewAntrenor()">
+        Adauga Antrenor
+    </button>
+
+    <button mat-raised-button (click)="inscriereLaAntrenor()">
+        Inscrisi la Antrenor
+    </button>
+
+    <button mat-raised-button onclick="location.href='/home';" >Home</button>
+
+</div>
+
+

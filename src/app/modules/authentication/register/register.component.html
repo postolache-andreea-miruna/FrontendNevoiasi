@@ -1,0 +1,16 @@
+
+<form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+    <p class="label">Choose a username </p>
+    <input formControlName = "email" placeholder="Email" type="text">
+
+    <p class="label">Choose a password </p>
+    <input formControlName = "password" placeholder="Password" type="password">
+
+    <p class="label">Choose a user type</p>
+    <input formControlName = "roleId" placeholder="NevoiasUser/DonatorUser" type="text">
+    <button type="submit">Register</button>
+</form>
+
+<div>
+    <a routerLink = "/auth/login">Already have an account? Login here</a>
+</div>

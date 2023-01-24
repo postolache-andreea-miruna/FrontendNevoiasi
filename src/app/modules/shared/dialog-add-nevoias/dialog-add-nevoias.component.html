@@ -1,0 +1,49 @@
+<div class="container">
+    <h1 class="title">
+        Adauga Nevoias
+    </h1>
+    <form [formGroup] = "nevoiasAddForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Gen</mat-label>
+            <input matInput placeholder="Nevoias Gen" formControlName="gen"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume Nevoias" formControlName="numeNevoias"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Prenume</mat-label>
+            <input matInput placeholder="Prenume Nevoias" formControlName="prenumeNevoias"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Data Nastere</mat-label>
+            <input matInput placeholder="Data Nastere" formControlName="dataNastere"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Sport</mat-label>
+            <input matInput placeholder="Sport Talent" formControlName="sportTalent"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>A fost ajutat? [0-nu, 1-da]</mat-label>
+            <input matInput placeholder="De Ajutat" formControlName="deAjutat"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Numar Telefon</mat-label>
+            <input matInput placeholder="Numarul de telefon" formControlName="telefon"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="saveAdd()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+

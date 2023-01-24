@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="title">
+        Editeaza Adresa
+    </h1>
+    <form [formGroup] = "adresaForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>numeStrada</mat-label>
+            <input matInput placeholder="Strada" formControlName="numeStrada"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>numarBloc</mat-label>
+            <input matInput placeholder="Bloc nr" formControlName="numarBloc"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>numarAp</mat-label>
+            <input matInput placeholder="Apartament" formControlName="numarAp"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>codPostal</mat-label>
+            <input matInput placeholder="codPostal" formControlName="codPostal"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="save()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+

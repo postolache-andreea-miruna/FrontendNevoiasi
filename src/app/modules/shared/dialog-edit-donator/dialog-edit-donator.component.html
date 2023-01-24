@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="title">
+        Editeaza Donator
+    </h1>
+    <form [formGroup] = "donatorForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Donator Id" formControlName="id"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume Donator" formControlName="numeDonator"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="save()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+

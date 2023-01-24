@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class = "container">
+    <h1 class="title">
+        Inscrieri la antrenor
+    </h1> 
+
+    <table mat-table [dataSource]="inscriereAntr" class="mat-elevation-z8 table">
+
+        <ng-container matColumnDef="numeNevoias">
+          <th mat-header-cell *matHeaderCellDef> Nume Nevoias </th>
+          <td mat-cell *matCellDef="let element"> {{element.numeNevoias}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="prenumeNevoias">
+            <th mat-header-cell *matHeaderCellDef> Prenume Nevoias </th>
+            <td mat-cell *matCellDef="let element"> {{element.prenumeNevoias}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="dataNastere">
+            <th mat-header-cell *matHeaderCellDef> Data Nastere </th>
+            <td mat-cell *matCellDef="let element">{{element.dataNastere}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="telefon">
+            <th mat-header-cell *matHeaderCellDef> Telefon </th>
+            <td mat-cell *matCellDef="let element">{{element.telefon}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dataStart">
+            <th mat-header-cell *matHeaderCellDef> Data Start </th>
+            <td mat-cell *matCellDef="let element">{{element.dataStart}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+    <button mat-raised-button onclick="location.href='/antr/antrenor';">Antrenori</button>
+    <button mat-raised-button onclick="location.href='/cl/club';">Cluburi</button>

@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="title">
+        Editeaza Antrenor
+    </h1>
+    <form [formGroup] = "antrForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Antrenor Id" formControlName="id"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput placeholder="Nume Antrenor" formControlName="numeAntrenor"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Ani experienta</mat-label>
+            <input matInput placeholder="Ani experienta" formControlName="aniExperienta"/>
+        </mat-form-field>
+        <button mat-raised-button (click)="save()" appHoverBtn>Salveaza</button>
+    </form>
+</div>

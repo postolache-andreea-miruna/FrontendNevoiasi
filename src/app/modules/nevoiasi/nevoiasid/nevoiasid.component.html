@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div clas="container">
+    <h1 class="title">
+        Detalii Nevoias
+    </h1>
+    <mat-card class="card">
+        <p>Nume: {{nevoiasId.numeNevoias}} {{nevoiasId.prenumeNevoias}}</p>
+        <p>Gen nevoias {{nevoiasId.gen}}</p>
+        <p>Data nastere: {{nevoiasId.dataNastere}}</p>
+        <p>Sport: {{nevoiasId.sportTalent}}</p>
+        <p>Email:  {{nevoiasId.email}}</p>
+        <p>Telefon: {{nevoiasId.telefon}}</p>
+    </mat-card>
+
+    <button mat-raised-button onclick="location.href='/nev/nevoias';">Nevoiasi</button>

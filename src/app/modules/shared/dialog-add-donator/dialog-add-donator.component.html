@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="title">
+        Adauga Donator
+    </h1>
+    <form [formGroup] = "donatorAddForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Nume Donator</mat-label>
+            <input matInput placeholder="Nume" formControlName="numeDonator"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Prenume Donator</mat-label>
+            <input matInput placeholder="Prenume" formControlName="prenumeDonator"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Pseudonim</mat-label>
+            <input matInput placeholder="Pseudonim" formControlName="pseudonim"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email"/>
+        </mat-form-field>
+
+
+        <button mat-raised-button (click)="saveAdd()" appHoverBtn>Salveaza</button>
+    </form>
+</div>

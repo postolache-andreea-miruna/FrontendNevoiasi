@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="title">
+        Editeaza Competitie
+    </h1>
+    <form [formGroup] = "competitieForm" class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Competitie Id" formControlName="id"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Start</mat-label>
+            <input matInput placeholder="Data start" formControlName="dataStart"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Final</mat-label>
+            <input matInput placeholder="Data final" formControlName="dataFinal"/>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="save()" appHoverBtn>Salveaza</button>
+    </form>
+</div>
+
